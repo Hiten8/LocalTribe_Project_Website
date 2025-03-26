@@ -1,0 +1,623 @@
+.cp {
+    background-image: none;
+    background-color: rgb(5, 5, 5);
+}
+
+.ch {
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.ch .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ch h1 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.ch p {
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.cContent {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.cd {
+    background-color: #232323;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.cd h2 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.cd p {
+    color: whitesmoke;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.cd p:last-child {
+    margin-bottom: 0;
+}
+
+.categories {
+    background-color: #232323;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.categories h2 {
+    color: white;
+    margin-bottom: 15px;
+    font-size: 2rem;
+}
+
+.categories > p {
+    color: whitesmoke;
+    margin-bottom: 25px;
+}
+
+.categoryTypes {
+    display: flex;
+    margin-bottom: 30px;
+    border-bottom: 1px solid whitesmoke;
+}
+
+.tab-button {
+    background-color: transparent;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: grey;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tab-button:hover {
+    background-color: whitesmoke;
+}
+
+.tab-button.active {
+    color: lightskyblue;
+    border-bottom: 3px solid lightskyblue;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.tab-content h3 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.packages {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.packageCard {
+    background-color: #232323;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    border: 1px solid black;
+}
+
+.packageCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.packageImage {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+.packageDetails {
+    padding: 20px;
+}
+
+.packageDetails h4 {
+    font-size: 1.3rem;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.packageDetails ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.packageDetails li {
+    color: whitesmoke;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.price {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: azure;
+    margin-bottom: 15px;
+}
+
+.book-button {
+    background-color: lightskyblue;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.book-button:hover {
+    background-color: rgb(77, 77, 219);
+}
+
+.booking-sidebar {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 380px;
+    height: 100vh;
+    background-color: #232323;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: right 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.booking-sidebar.active {
+    right: 0;
+}
+
+.booking-sidebar-header {
+    padding: 20px;
+    border-bottom: 1px solid white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #232323;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+}
+
+.booking-sidebar-header h3 {
+    color: white;
+    margin: 0;
+}
+
+.close-btn {
+    background-color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.booking-sidebar-content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.sidebar-package-image {
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.booking-sidebar-content h4 {
+    font-size: 1.4rem;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.sidebar-package-price {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: rgb(77, 77, 219);
+    margin-bottom: 20px;
+}
+
+.sidebar-section {
+    margin-bottom: 25px;
+}
+
+.sidebar-section h5 {
+    font-size: 1.1rem;
+    color: whitesmoke;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #232323;
+}
+
+.sidebar-section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+.sidebar-section li {
+    color: whitesmoke;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: whitesmoke;
+    font-weight: 500;
+}
+
+.form-group input, 
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #232323;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+.booking-sidebar-footer {
+    padding: 15px 20px;
+    border-top: 1px solid whitesmoke;
+    background-color: #232323;
+    position: sticky;
+    bottom: 0;
+}
+
+.proceed-button {
+    background-color: rgb(77, 77, 219);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.proceed-button:hover {
+    background-color: rgb(77, 77, 219);
+}
+
+.overlay-dark {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none;
+}
+
+.overlay-dark.active {
+    display: block;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 40px 20px 20px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: whitesmoke;
+}
+
+.footer-section p {
+    color: lightgray;
+    line-height: 1.6;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+    color: lightgray;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    margin-top: 30px;
+    border-top: 1px solid gray;
+    color: lightgrey;
+    max-width: 1200px;
+    margin: 30px auto 0;
+}
+
+.chat-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    font-family: 'Arial', sans-serif;
+}
+
+.chat-toggle {
+    background-color: rgb(77, 77, 219);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.chat-toggle:hover {
+    background-color: rgb(77, 77, 219);
+    transform: translateY(-2px);
+}
+
+.chat-icon {
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+.chat-text {
+    font-weight: 600;
+}
+
+.chat-container {
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+    width: 350px;
+    height: 450px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    display: none;
+}
+
+.chat-header {
+    background-color: rgb(77, 77, 219);
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-header h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: white;
+}
+
+.close-chat {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.chat-messages {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.message {
+    margin-bottom: 15px;
+    max-width: 80%;
+}
+
+.message.user {
+    align-self: flex-end;
+}
+
+.message.bot {
+    align-self: flex-start;
+}
+
+.message-content {
+    padding: 10px 15px;
+    border-radius: 18px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.user .message-content {
+    background-color: rgb(77, 77, 219);
+    color: white;
+    border-bottom-right-radius: 5px;
+}
+
+.bot .message-content {
+    background-color: whitesmoke;
+    color: black;
+    border-bottom-left-radius: 5px;
+}
+
+.chat-input-container {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid whitesmoke;
+}
+
+.chat-input-container input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    font-size: 0.95rem;
+}
+
+.chat-input-container input:focus {
+    outline: none;
+    border-color: rgb(77, 77, 219);
+}
+
+.chat-input-container button {
+    background-color: rgb(77, 77, 219);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0 20px;
+    margin-left: 10px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.chat-input-container button:hover {
+    background-color: rgb(77, 77, 219);
+}
+
+@media (max-width: 400px) {
+    .chat-container {
+        width: 300px;
+    }
+    
+    .chat-toggle {
+        padding: 10px 16px;
+    }
+    
+    .chat-text {
+        display: none;
+    }
+    
+    .chat-icon {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 900px) {
+    .packages {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .booking-sidebar {
+        width: 320px;
+    }
+}
+
+@media (max-width: 600px) {
+    .city-header h1 {
+        font-size: 3rem;
+    }
+    
+    .category-tabs {
+        flex-direction: column;
+        border-bottom: none;
+    }
+    
+    .tab-button {
+        border: 1px solid lightgrey;
+        margin-bottom: 5px;
+        border-radius: 5px;
+    }
+    
+    .tab-button.active {
+        border-bottom: 1px solid rgb(77, 77, 219);
+        background-color: whitesmoke;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-sidebar {
+        width: 85%;
+    }
+}
+
+@media (max-width: 400px) {
+    .booking-sidebar {
+        width: 100%;
+    }
+}
